@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/meal-hunter/static/css/main.03cd0413.css",
+    "main.js": "/meal-hunter/static/js/main.44f1c31c.js",
+    "static/js/787.335d72cf.chunk.js": "/meal-hunter/static/js/787.335d72cf.chunk.js",
+    "index.html": "/meal-hunter/index.html",
+    "main.03cd0413.css.map": "/meal-hunter/static/css/main.03cd0413.css.map",
+    "main.44f1c31c.js.map": "/meal-hunter/static/js/main.44f1c31c.js.map",
+    "787.335d72cf.chunk.js.map": "/meal-hunter/static/js/787.335d72cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.03cd0413.css",
+    "static/js/main.44f1c31c.js"
+  ]
+}
