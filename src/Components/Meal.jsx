@@ -70,7 +70,7 @@ function Meal() {
         <button
           id="random"
           onClick={() => {
-            setMessage(`Random Dish for you.`);
+            setMessage(`Lets try this dish today`);
             randomData();
           }}
         >
