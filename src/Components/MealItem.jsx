@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import "../App.css";
-// import { FaYoutube } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+
 function MealItem(props) {
   const [showMeal, setShowMeal] = useState([]);
   const [visible, setVisible] = useState(false);
-  // const meal = props.data;
-  // console.log(props);
-  // console.log(props.data);
+
   return (
-    <>
+    <div className="cardCont">
+      <div>
+        <h1>{props.data.strMeal}</h1>
+        <div>
+          <a href="https://www.youtube.com/watch?v=N1aJ3nEYXyg">
+            <FaYoutube size={35} />
+          </a>
+        </div>
+      </div>
       <div
         className="card"
         onClick={(e) => {
-          console.log(e);
-          console.log(props);
-          console.log([props]);
           setShowMeal([props]);
           setVisible(!visible);
         }}
@@ -34,7 +38,6 @@ function MealItem(props) {
                       <h2>{e.data.strCategory}</h2>
                       <h2>{e.data.strArea}</h2>
                     </div>
-                    {/* <div style={{ marginLeft: "20%", marginRight: "20%" }}></div> */}
                     <h2> Recipe </h2> {e.data.strInstructions}
                     <h2>Ingredients</h2>
                     <span className="ingredients">
@@ -76,29 +79,29 @@ function MealItem(props) {
                       {e.data.strMeasure11}
                     </span>
                     <span className="ingredients">
-                      {e.data.strIngredient12} 
+                      {e.data.strIngredient12}
                       {e.data.strMeasure12}
                     </span>
                     <br />
                     <span className="ingredients">
-                      {e.data.strIngredient13} 
+                      {e.data.strIngredient13}
                       {e.data.strMeasure13}
                     </span>
                     <span className="ingredients">
-                      {e.data.strIngredient14} 
+                      {e.data.strIngredient14}
                       {e.data.strMeasure14}
                     </span>
                     <span className="ingredients">
-                      {e.data.strIngredient15} 
+                      {e.data.strIngredient15}
                       {e.data.strMeasure15}
                     </span>
                     <span className="ingredients">
-                      {e.data.strIngredient16} 
+                      {e.data.strIngredient16}
                       {e.data.strMeasure16}
                     </span>
                     <br />
                     <span className="ingredients">
-                      {e.data.strIngredient17} 
+                      {e.data.strIngredient17}
                       {e.data.strMeasure17}
                     </span>
                     <span className="ingredients">
@@ -106,25 +109,20 @@ function MealItem(props) {
                       {e.data.strMeasure18}
                     </span>
                     <span className="ingredients">
-                      {e.data.strIngredient19} 
+                      {e.data.strIngredient19}
                       {e.data.strMeasure19}
                     </span>
                     <span className="ingredients">
-                      {e.data.strIngredient20} 
+                      {e.data.strIngredient20}
                       {e.data.strMeasure20}
                     </span>
-                    {/* <div>
-                      <a href="https://www.youtube.com/watch?v=N1aJ3nEYXyg">
-                        <FaYoutube size={50} />
-                      </a>
-                    </div> */}
                   </div>
                 </>
               );
             })
           : ""}
       </div>
-    </>
+    </div>
   );
 }
 

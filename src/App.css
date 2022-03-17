@@ -4,8 +4,6 @@
 }
 
 .card {
-  /* width: 200px;
-  height: 250px;  */
   width: auto;
   height: auto;
   margin: 0.5rem;
@@ -28,7 +26,6 @@
     rgba(106, 4, 15, 0.5),
     rgba(106, 4, 15, 0.1)
   );
-  /* background: rgb(106, 4, 15, 0.4); */
   transition: 0.2s all;
 }
 .card:hover:before {
@@ -41,22 +38,23 @@
 
 .card .mealName {
   position: absolute;
-  top: 5%;
+  top: 35%;
   bottom: 10%;
   left: 10%;
   right: 10%;
   text-align: center;
   padding: 0.5rem 1rem;
   display: none;
-  font-size: x-large;
+  font-size: large;
   width: 20%;
+  color: rgb(200, 255, 0);
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: 0px auto;
+  margin: auto auto auto auto;
   background-color: rgb(247, 217, 141);
   height: auto;
   min-height: 545px;
@@ -109,9 +107,11 @@ input {
 .mealName {
   text-align: center;
 }
+
 .ingredients {
   margin: 1rem;
 }
+
 #mealHead {
   border: 1px solid;
   /* background-color: rgb(106, 4, 15,.5); */
@@ -121,6 +121,20 @@ input {
   padding: 1rem;
   box-shadow: 0px 0px 20px 0px #f48c06;
 }
-h1, h2, h3{
+
+h1,
+h2,
+h3 {
+  margin: 1rem;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.cardCont {
+  border: 2px solid rgb(55, 6, 23);
+  text-align: center;
   margin: 1rem;
 }

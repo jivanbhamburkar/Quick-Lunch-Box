@@ -1,38 +1,42 @@
 import React, { useState } from "react";
-import MealItem from "./MealItem";
+import MealItem from "../Components/MealItem";
 import "../App.css";
 import { FaRandom, FaSearch } from "react-icons/fa";
 
-function Meal() {
+function Mea() {
   const [search, setSearch] = useState();
   const [meal, setMeal] = useState();
   const [random, setRandom] = useState();
-  const [message, setMessage] = useState(
-    "Happy to serve you.  Please Search..."
-  );
+  const [loading, setLoading] = useState("");
+  // const [showMeal, setShowMeal] = useState([]);
 
   function mealData() {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
       .then((responce) => responce.json())
       .then((data) => {
+        // console.log(data);
+        // console.log(data.meals);
         if (data.meals) {
           setMeal(data.meals);
-          setMessage(`Showing Results for:${search}`);
-        } else {
-          setMessage("No match found... Please! Try different Dish");
-          setMeal();
         }
+        setLoading(false);
+        // setSearch();
       });
+
   }
 
   function randomData() {
     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
       .then((res) => res.json())
       .then((data) => {
+        // console.log(data.meals);
         setRandom(data.meals);
       });
+    setLoading(false);
   }
-
+  // if(!meal){
+  //   return <h2>Sorry... Try Another Meal</h2>
+  // }
   return (
     <div className="main">
       <div id="title">
@@ -54,13 +58,11 @@ function Meal() {
           id="search"
           onClick={() => {
             if (search) {
-              setMessage("Loading... Please Wait...");
+              setLoading(true);
               mealData();
+              // setSearch("");
               setRandom();
-            } else {
-              setMessage(
-                "Please enter something in the input field to get best results"
-              );
+              
             }
           }}
         >
@@ -70,8 +72,9 @@ function Meal() {
         <button
           id="random"
           onClick={() => {
-            setMessage(`Random Dish for you.`);
+            setLoading(true);
             randomData();
+           
           }}
         >
           <FaRandom size={15} />
@@ -80,20 +83,47 @@ function Meal() {
 
       <div className="container">
         <div style={{ width: "100%" }}>
-          <h2>{message}</h2>
+          {loading  ? (
+            <h2>Loading...</h2>
+          ) : (
+            <h2>Showing Results for : {search}</h2>
+          )}
         </div>
         {random
           ? random.map((item) => {
-              return <MealItem data={item} />;
+              return (
+                <MealItem
+                  data={item}
+                  //  onClick={() => setShowMeal([item])}
+                />
+              );
             })
           : meal
           ? meal.map((item) => {
-              return <MealItem data={item} />;
+              return (
+                <MealItem
+                  data={item}
+                  // onClick={() => setShowMeal([item])}
+                />
+              );
             })
           : ""}
+
+        <div>
+          {/* {showMeal.map((e) => {
+          return (
+            <>
+              <div>
+                <h1>{e.data.strMeal}</h1>
+                <img src={e.data.strMealThumb} alt="Meal" />
+              </div>
+            </>
+          );
+        })} */}
+        </div>
       </div>
     </div>
   );
 }
 
-export default Meal;
+export default Mea;
