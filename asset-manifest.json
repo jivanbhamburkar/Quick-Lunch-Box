@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/meal-hunter/static/css/main.ae97849a.css",
-    "main.js": "/meal-hunter/static/js/main.0ff63421.js",
+    "main.css": "/meal-hunter/static/css/main.b663e5c3.css",
+    "main.js": "/meal-hunter/static/js/main.1eaf62e1.js",
     "static/js/787.335d72cf.chunk.js": "/meal-hunter/static/js/787.335d72cf.chunk.js",
     "index.html": "/meal-hunter/index.html",
-    "main.ae97849a.css.map": "/meal-hunter/static/css/main.ae97849a.css.map",
-    "main.0ff63421.js.map": "/meal-hunter/static/js/main.0ff63421.js.map",
+    "main.b663e5c3.css.map": "/meal-hunter/static/css/main.b663e5c3.css.map",
+    "main.1eaf62e1.js.map": "/meal-hunter/static/js/main.1eaf62e1.js.map",
     "787.335d72cf.chunk.js.map": "/meal-hunter/static/js/787.335d72cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ae97849a.css",
-    "static/js/main.0ff63421.js"
+    "static/css/main.b663e5c3.css",
+    "static/js/main.1eaf62e1.js"
   ]
 }
