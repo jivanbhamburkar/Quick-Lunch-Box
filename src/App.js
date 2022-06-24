@@ -1,8 +1,8 @@
-import Meal from "./Components/Meal";
+import Dishes from "./Components/Dishes";
 import "./App.css";
 
 function App() {
-  return <Meal />;
+  return <Dishes />;
 }
 
 export default App;

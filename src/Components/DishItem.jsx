@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import { FaYoutube } from "react-icons/fa";
 
-function MealItem(props) {
+function DishItem(props) {
   const [showMeal, setShowMeal] = useState([]);
   const [visible, setVisible] = useState(false);
 
@@ -126,4 +126,4 @@ function MealItem(props) {
   );
 }
 
-export default MealItem;
+export default DishItem;

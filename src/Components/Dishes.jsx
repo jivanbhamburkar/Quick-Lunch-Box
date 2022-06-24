@@ -1,26 +1,26 @@
 import React, { useState } from "react";
-import MealItem from "./MealItem";
+import DishItem from "./DishItem";
 import "../App.css";
 import { FaRandom, FaSearch } from "react-icons/fa";
 
-function Meal() {
+function Dishes() {
   const [search, setSearch] = useState();
-  const [meal, setMeal] = useState();
+  const [dish, setDish] = useState();
   const [random, setRandom] = useState();
   const [message, setMessage] = useState(
     "Happy to serve you.  Please Search..."
   );
 
-  function mealData() {
+  function DishesData() {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
       .then((responce) => responce.json())
       .then((data) => {
         if (data.meals) {
-          setMeal(data.meals);
+          setDish(data.meals);
           setMessage(`Showing Results for:${search}`);
         } else {
           setMessage("No match found... Please! Try different Dish");
-          setMeal();
+          setDish();
         }
       });
   }
@@ -55,7 +55,7 @@ function Meal() {
           onClick={() => {
             if (search) {
               setMessage("Loading... Please Wait...");
-              mealData();
+              DishesData();
               setRandom();
             } else {
               setMessage(
@@ -84,11 +84,11 @@ function Meal() {
         </div>
         {random
           ? random.map((item) => {
-              return <MealItem data={item} />;
+              return <DishItem data={item} />;
             })
-          : meal
-          ? meal.map((item) => {
-              return <MealItem data={item} />;
+          : dish
+          ? dish.map((item) => {
+              return <DishItem data={item} />;
             })
           : ""}
       </div>
@@ -96,4 +96,4 @@ function Meal() {
   );
 }
 
-export default Meal;
+export default Dishes;
