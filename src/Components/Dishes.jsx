@@ -36,7 +36,7 @@ function Dishes() {
   return (
     <div className="main">
       <div id="title">
-        <h1>Meal Finder</h1>
+        <h1>Quick Lunch box</h1>
       </div>
 
       <div id="searchBar">
