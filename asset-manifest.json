@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/meal-hunter/static/css/main.b663e5c3.css",
-    "main.js": "/meal-hunter/static/js/main.d45f8121.js",
-    "static/js/787.335d72cf.chunk.js": "/meal-hunter/static/js/787.335d72cf.chunk.js",
-    "index.html": "/meal-hunter/index.html",
-    "main.b663e5c3.css.map": "/meal-hunter/static/css/main.b663e5c3.css.map",
-    "main.d45f8121.js.map": "/meal-hunter/static/js/main.d45f8121.js.map",
-    "787.335d72cf.chunk.js.map": "/meal-hunter/static/js/787.335d72cf.chunk.js.map"
+    "main.css": "/Quick-Lunch-Box/static/css/main.f4b27e91.css",
+    "main.js": "/Quick-Lunch-Box/static/js/main.1f7b0724.js",
+    "static/js/453.8c59e4b3.chunk.js": "/Quick-Lunch-Box/static/js/453.8c59e4b3.chunk.js",
+    "index.html": "/Quick-Lunch-Box/index.html",
+    "main.f4b27e91.css.map": "/Quick-Lunch-Box/static/css/main.f4b27e91.css.map",
+    "main.1f7b0724.js.map": "/Quick-Lunch-Box/static/js/main.1f7b0724.js.map",
+    "453.8c59e4b3.chunk.js.map": "/Quick-Lunch-Box/static/js/453.8c59e4b3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b663e5c3.css",
-    "static/js/main.d45f8121.js"
+    "static/css/main.f4b27e91.css",
+    "static/js/main.1f7b0724.js"
   ]
 }
